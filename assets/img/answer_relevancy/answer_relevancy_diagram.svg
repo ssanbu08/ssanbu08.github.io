@@ -1,0 +1,139 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="relevantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="irrelevantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="neutralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1e293b">
+    Why Answer Relevancy Matters Most in RAG
+  </text>
+  
+  <!-- User Question -->
+  <rect x="50" y="80" width="700" height="60" rx="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569" font-weight="bold">
+    User Question
+  </text>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1e293b">
+    "What are the best practices for database indexing?"
+  </text>
+  
+  <!-- RAG System Box -->
+  <rect x="200" y="170" width="400" height="80" rx="15" fill="url(#neutralGradient)" filter="url(#shadow)"/>
+  <text x="400" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+    RAG System
+  </text>
+  <text x="400" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    ✓ Retrieves Relevant Documents
+  </text>
+  <text x="400" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    ✓ Generates Fluent Text
+  </text>
+  
+  <!-- Two Response Paths -->
+  
+  <!-- Left Side - Irrelevant Response -->
+  <g>
+    <!-- Arrow -->
+    <path d="M 300 250 L 200 350" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Response Box -->
+    <rect x="50" y="360" width="300" height="150" rx="15" fill="url(#irrelevantGradient)" filter="url(#shadow)"/>
+    <text x="200" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Irrelevant Response
+    </text>
+    <text x="200" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "Here's a comprehensive guide to"
+    </text>
+    <text x="200" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "setting up your development"
+    </text>
+    <text x="200" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "environment and configuring"
+    </text>
+    <text x="200" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "database connections..."
+    </text>
+    
+    <!-- Impact -->
+    <rect x="70" y="470" width="260" height="30" rx="5" fill="#ffffff40"/>
+    <text x="200" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+      ❌ User Trust Lost • Poor Experience
+    </text>
+  </g>
+  
+  <!-- Right Side - Relevant Response -->
+  <g>
+    <!-- Arrow -->
+    <path d="M 500 250 L 600 350" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Response Box -->
+    <rect x="450" y="360" width="300" height="150" rx="15" fill="url(#relevantGradient)" filter="url(#shadow)"/>
+    <text x="600" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Relevant Response
+    </text>
+    <text x="600" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "Key database indexing best"
+    </text>
+    <text x="600" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "practices include: 1) Index"
+    </text>
+    <text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "frequently queried columns"
+    </text>
+    <text x="600" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      "2) Avoid over-indexing..."
+    </text>
+    
+    <!-- Impact -->
+    <rect x="470" y="470" width="260" height="30" rx="5" fill="#ffffff40"/>
+    <text x="600" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+      ✅ User Satisfied • Mission Accomplished
+    </text>
+  </g>
+  
+  <!-- Bottom Key Message -->
+  <rect x="100" y="540" width="600" height="40" rx="20" fill="#fbbf24" filter="url(#shadow)"/>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">
+    Answer Relevancy = The Ultimate RAG Success Metric
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="200" r="3" fill="#10b981" opacity="0.6"/>
+  <circle cx="700" cy="180" r="3" fill="#ef4444" opacity="0.6"/>
+  <circle cx="150" cy="320" r="2" fill="#6366f1" opacity="0.4"/>
+  <circle cx="650" cy="300" r="2" fill="#10b981" opacity="0.4"/>
+</svg>
